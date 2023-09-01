@@ -40,8 +40,9 @@ button {
   margin-top: 10px;
 }
 
+/*background-image: url("../../../assets/background.jpg");*/
+
 .animation {
-  background-image: url('../../assets/background.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   width: 300px; /* Adjust the size as needed */

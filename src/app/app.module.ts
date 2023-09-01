@@ -6,12 +6,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
