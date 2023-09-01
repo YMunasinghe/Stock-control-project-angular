@@ -41,7 +41,7 @@ button {
 }
 
 .animation {
-  background-image: url('your-animation-image.jpg');
+  background-image: url('../../assets/background.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   width: 300px; /* Adjust the size as needed */
