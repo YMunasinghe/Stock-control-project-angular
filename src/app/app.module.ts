@@ -7,13 +7,17 @@ import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { FirstPageBodyComponent } from './components/first-page-body/first-page-body.component';
+import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    TopBarComponent
+    TopBarComponent,
+    FirstPageBodyComponent,
+    BottomBarComponent
   ],
   imports: [
     BrowserModule,
