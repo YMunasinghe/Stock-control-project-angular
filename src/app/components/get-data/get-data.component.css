@@ -1,0 +1,15 @@
+/*element.style{*/
+/*  justify-content: space-between;*/
+/*}*/
+
+/*.usersList{*/
+/* */
+/*  justify-content: space-between;*/
+
+/*}*/
+
+div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

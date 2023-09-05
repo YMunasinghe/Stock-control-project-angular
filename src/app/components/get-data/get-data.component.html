@@ -1,0 +1,13 @@
+<div>
+  <h1>Users List</h1>
+
+  <app-changing-button (onShowHideBtnClick)="onShowHideBtnClick($event)"></app-changing-button>
+</div>
+<!--  <span *ngIf="isButtonClick">-->
+<!--      <app-user-table></app-user-table>-->
+<!--    </span>-->
+<!--  <span *ngIf="!isButtonClick">-->
+
+<!--  </span>-->
+  <app-user-table [hidden]="!isButtonClick"></app-user-table>
+

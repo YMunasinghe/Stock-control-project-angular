@@ -12,6 +12,10 @@ import { BottomBarComponent } from './components/bottom-bar/bottom-bar.component
 import { LoggedInComponent } from './components/logged-in/logged-in.component';
 import { SideNavBarComponent } from './components/side-nav-bar/side-nav-bar.component';
 import { LoggedInTopBarComponent } from './components/logged-in-top-bar/logged-in-top-bar.component';
+import { ChangingButtonComponent } from './components/changing-button/changing-button.component';
+import { GetDataComponent } from './components/get-data/get-data.component';
+import { UserTableComponent } from './components/user-table/user-table.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,12 +27,16 @@ import { LoggedInTopBarComponent } from './components/logged-in-top-bar/logged-i
     BottomBarComponent,
     LoggedInComponent,
     SideNavBarComponent,
-    LoggedInTopBarComponent
+    LoggedInTopBarComponent,
+    ChangingButtonComponent,
+    GetDataComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
