@@ -1,0 +1,56 @@
+.top-bar {
+  margin-left: 270px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.user-role {
+  font-size: 13px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.company-name {
+  font-size: 18px;
+}
+
+.user-profile {
+
+  display: flex;
+}
+
+.user-info {
+  display: flex; /* Use flexbox to create a horizontal layout */
+  align-items: center; /* Vertically center the items */
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  /*margin-right: 10px; !* Add space between the image and details *!*/
+  border: 1px solid #fff;
+}
+
+.user-details {
+  /* Add space between the name and position */
+  margin-left: 10px;
+  text-align: left;
+}
+
+.user-name {
+  font-size: 15px;
+  margin: 0; /* Reset margin for the name */
+}
+
+.user-position {
+  font-size: 5px;
+  color: #ccc;
+  margin: 0; /* Reset margin for the position */
+}

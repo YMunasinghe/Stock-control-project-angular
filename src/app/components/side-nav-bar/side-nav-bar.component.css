@@ -1,0 +1,51 @@
+.sidebar {
+  height: 100vh;
+  width: 230px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  /* Add background color and padding to each list item */
+  background-color: #444; /* Change this color to your desired background color */
+  padding: 8px;
+  border-radius: 5px; /* Add rounded corners to the background */
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+/* Style the anchor (link) elements */
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Add a hover effect for the list items */
+li:hover {
+  background-color: #555; /* Change this color to your desired hover background color */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  background-color: #d7d6d6;
+  color: #000000;
+  padding: 5px 5px;
+  border-radius: 5px
+}
+
+.software-name{
+  font-size: 20px;
+  font-weight: bold;
+}

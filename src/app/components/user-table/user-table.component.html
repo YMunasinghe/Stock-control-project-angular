@@ -1,0 +1,19 @@
+<table border="1">
+  <tr>
+    <!-- Table headers (th) -->
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>User Role</th>
+    <th>Created Date</th>
+    <th>Created Time</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.userId}}</td>
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.userRole}}</td>
+    <td>{{user.createdDate}}</td>
+    <td>{{user.createdTime}}</td>
+  </tr>
+</table>
