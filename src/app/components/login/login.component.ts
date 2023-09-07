@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {User} from "../../../user";
 import {UserService} from "../../Service/user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
 
   user:User=new User();
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService, private router:Router) {
 
   }
 
@@ -25,7 +26,8 @@ export class LoginComponent {
     // console.log('Password:', this.password);
 
     this.userService.loginUser(this.user).subscribe(data=>{
-      alert("Login Successful");
+      this.router.navigate(['loggedIn']);
+      // alert("Login Successful");
     },error =>alert("Sorry, Invalid Credentials"));
   }
 }
