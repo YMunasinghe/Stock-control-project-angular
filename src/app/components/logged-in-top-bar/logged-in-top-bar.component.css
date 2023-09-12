@@ -1,18 +1,21 @@
 .top-bar {
-  margin-left: 270px;
-  background-color: #333;
+  margin: 6px;
+  background-color: #18283b;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+  position: fixed;
+  left: 265px;
+  width: calc(100% - 275px);
 }
 
 .user-role {
   font-size: 13px;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 1px;
 }
 
 .company-name {

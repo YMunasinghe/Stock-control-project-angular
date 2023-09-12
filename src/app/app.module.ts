@@ -16,6 +16,11 @@ import { ChangingButtonComponent } from './components/changing-button/changing-b
 import { GetDataComponent } from './components/get-data/get-data.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchItemDashboardComponent } from './components/search-item-dashboard/search-item-dashboard.component';
+import { AvailableItemsDashboardComponent } from './components/available-items-dashboard/available-items-dashboard.component';
+import { MovingItemsDashboardComponent } from './components/moving-items-dashboard/moving-items-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +35,18 @@ import {HttpClientModule} from "@angular/common/http";
     LoggedInTopBarComponent,
     ChangingButtonComponent,
     GetDataComponent,
-    UserTableComponent
+    UserTableComponent,
+    DashboardComponent,
+    SearchItemDashboardComponent,
+    AvailableItemsDashboardComponent,
+    MovingItemsDashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

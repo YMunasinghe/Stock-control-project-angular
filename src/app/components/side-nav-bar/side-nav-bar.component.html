@@ -4,12 +4,66 @@
   <div class="sidebar-header">
       <h3 class="software-name">Easy Stocks</h3>
   </div>
-
+  <hr  style="margin: 0; left: 16px; width: calc(100% - 32px);">
   <!-- Navigation links -->
+<<<<<<< Updated upstream
   <ul>
     <li><a routerLink="/dashboard">Dashboard</a></li>
     <li><a routerLink="/toDoList">To do List</a></li>
     <li><a routerLink="/reports">Reports</a></li>
 <!--     Add more navigation items as needed -->
   </ul>
+=======
+  <div class="nav-content">
+    <ul>
+      <li class="nav-button"><a routerLink="/dashboard">Dashboard</a></li>
+      <hr/>
+      <li class="nav-button"><a routerLink="/toDoList">To do List</a></li>
+      <hr/>
+      <li class="nav-button"><a routerLink="/reports">Reports</a></li>
+      <hr/>
+      <div (click)="toggleMasterCollapse()" class="drop-down-icon-style">
+       <li><a routerLink="/reports">Master</a></li>
+        <fa-icon [icon]="isMasterCollapsed ? faAngleDown : faAngleUp" style="color: #8392a5;"></fa-icon>
+      </div>
+      <div [class.collapseBar]="isMasterCollapsed">
+        <ul>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/dashboard">Customer</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">Supplier</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">Product</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">Product Company</a></li>
+      </ul>
+      </div>
+      <hr/>
+<!--      <li (click)="toggleTransactionCollapse()"><a routerLink="/reports">Transaction</a></li>-->
+      <div (click)="toggleTransactionCollapse()" class="drop-down-icon-style">
+        <li><a routerLink="/reports">Transaction</a></li>
+        <fa-icon [icon]="isTransactionCollapsed ? faAngleDown : faAngleUp" style="color: #8392a5;"></fa-icon>
+      </div>
+      <div [class.collapseBar]="isTransactionCollapsed">
+        <ul>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/dashboard">PO</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">GRN</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">GRN Return</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">Issue Sample</a></li>
+          <hr class="child-hr-style">
+          <li class="second-content"><a routerLink="/toDoList">Damage</a></li>
+        </ul>
+      </div>
+      <hr/>
+      <li><a routerLink="/reports">Sales</a></li>
+
+      <hr/>
+  <!--     Add more navigation items as needed -->
+    </ul>
+  </div>
+>>>>>>> Stashed changes
 </div>
