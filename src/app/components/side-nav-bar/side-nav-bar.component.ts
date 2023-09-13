@@ -7,10 +7,10 @@ import {faAngleDown, faAngleUp} from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./side-nav-bar.component.css']
 })
 export class SideNavBarComponent {
-
-<<<<<<< Updated upstream
-=======
   // faDown= "fa fa-caret-down";
+  isMasterCollapsed: boolean = true;
+  isTransactionCollapsed: boolean = true;
+  isSalesCollapsed: boolean = true;
 
   toggleMasterCollapse(): void {
     this.isMasterCollapsed = !this.isMasterCollapsed;
@@ -24,5 +24,4 @@ export class SideNavBarComponent {
 
   protected readonly faAngleDown = faAngleDown;
   protected readonly faAngleUp = faAngleUp;
->>>>>>> Stashed changes
 }
