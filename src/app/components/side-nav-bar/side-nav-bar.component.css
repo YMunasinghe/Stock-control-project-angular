@@ -79,15 +79,13 @@
   width: 0; /* Set the width of the scrollbar to 0 */
 }
 
-hr {
-  margin: 0;
-  position: relative;
-  width: 100%;
-  /*border: none;*/
-  border-top: solid 1px #2c3e50;
-
-
-}
+/*hr {*/
+/*  margin: 0;*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  !*border: none;*!*/
+/*  border-top: solid 1px #2c3e50;*/
+/*}*/
 
 .child-hr-style{
   /*margin: 0;*/
