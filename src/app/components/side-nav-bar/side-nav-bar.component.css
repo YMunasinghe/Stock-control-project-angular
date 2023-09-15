@@ -3,9 +3,7 @@
   width: 260px;
   background-color: #18283b;
   color: #fff;
-
-  padding: 20px;
-
+  padding: 0;
   /*padding: 20px;*/
   position: fixed;    /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
   /*margin: 10px 10px 10px 10px;*/
@@ -79,13 +77,15 @@
   width: 0; /* Set the width of the scrollbar to 0 */
 }
 
-/*hr {*/
-/*  margin: 0;*/
-/*  position: relative;*/
-/*  width: 100%;*/
-/*  !*border: none;*!*/
-/*  border-top: solid 1px #2c3e50;*/
-/*}*/
+hr {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 0;
+  border-top: solid 1px #2c3e50;
+  /*border-bottom: 0.01px;*/
+}
 
 .child-hr-style{
   /*margin: 0;*/
