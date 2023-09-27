@@ -1,0 +1,12 @@
+<div>
+  <p>Available Items</p>
+<!--  <div>-->
+<!--    <p>Screen Width: {{ screenWidth }} pixels</p>-->
+<!--    <p>Screen Height: {{ screenHeight }} pixels</p>-->
+<!--  </div>-->
+
+  <div class="available-all-items">
+    <p *ngFor="let availableItem of availableItems" class="available-item">{{availableItem}}</p>
+
+  </div>
+</div>

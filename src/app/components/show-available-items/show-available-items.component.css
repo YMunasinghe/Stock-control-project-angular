@@ -1,0 +1,15 @@
+.available-all-items{
+  /*display: flex;*/
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+}
+.available-item{
+  float: left;
+  width: 30%;
+  background-color: #e8eaec;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+  height: 2rem;
+  transition: background-color 0.3s ease;
+}
