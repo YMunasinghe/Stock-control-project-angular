@@ -18,8 +18,8 @@
       <hr/>
 
       <div (click)="toggleMasterCollapse()" class="drop-down-icon-style">
-       <li><a routerLink="/reports">Master</a></li>
-        <fa-icon [icon]="isMasterCollapsed ? faAngleDown : faAngleUp" style="color: #8392a5;"></fa-icon>
+       <li class="drop-down-icon-style"><a routerLink="/reports">Master</a></li>
+        <fa-icon [icon]="isMasterCollapsed ? faAngleDown : faAngleUp" style="color: #8392a5; padding-right: 10px;"></fa-icon>
       </div>
       <div [class.collapseBar]="isMasterCollapsed">
         <ul>
@@ -35,9 +35,11 @@
       </div>
       <hr/>
 <!--      <li (click)="toggleTransactionCollapse()"><a routerLink="/reports">Transaction</a></li>-->
-      <div (click)="toggleTransactionCollapse()" class="drop-down-icon-style">
-        <li><a routerLink="/reports">Transaction</a></li>
-        <fa-icon [icon]="isTransactionCollapsed ? faAngleDown : faAngleUp" style="color: #8392a5;"></fa-icon>
+      <div (click)="toggleTransactionCollapse()">
+        <div class="drop-down-icon-style">
+        <li class="drop-down-icon-style"><a routerLink="/reports">Transaction</a></li>
+        <fa-icon [icon]="isTransactionCollapsed ? faAngleDown : faAngleUp" style="color: #8392a5; padding-right: 10px;"></fa-icon>
+        </div>
       </div>
       <div [class.collapseBar]="isTransactionCollapsed">
         <ul>

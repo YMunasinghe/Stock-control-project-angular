@@ -21,6 +21,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchItemDashboardComponent } from './components/search-item-dashboard/search-item-dashboard.component';
 import { AvailableItemsDashboardComponent } from './components/available-items-dashboard/available-items-dashboard.component';
 import { MovingItemsDashboardComponent } from './components/moving-items-dashboard/moving-items-dashboard.component';
+import { SearchItemComponent } from './components/search-item/search-item.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MovingItemsDashboardComponent } from './components/moving-items-dashboa
     DashboardComponent,
     SearchItemDashboardComponent,
     AvailableItemsDashboardComponent,
-    MovingItemsDashboardComponent
+    MovingItemsDashboardComponent,
+    SearchItemComponent
   ],
   imports: [
     BrowserModule,
