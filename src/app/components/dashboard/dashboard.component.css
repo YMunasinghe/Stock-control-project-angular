@@ -3,9 +3,26 @@
   margin-top: 10px;
   margin-right: 10px;
   /*margin-: 10px;*/
+
 }
 
 hr{
   margin-top: 1rem;
-  opacity: 0.3;
+  opacity: 0.1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.dummy-top-bar{
+  font-family: cursive;
+  margin-left: 265px;
+  color: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  border-radius: 5px;
+  width: calc(100% - 320px);
+
+
 }

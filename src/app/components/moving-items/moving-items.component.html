@@ -1,0 +1,91 @@
+<p>Sort Items by date</p>
+<div class="form-div">
+  <form class="search-form" (ngSubmit)="search()">
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" [(ngModel)]="startDate" name="startDate">
+    </div>
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" [(ngModel)]="endDate" name="endDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+
+<!--<div>-->
+<!--  <ul>-->
+<!--    <li>Apples</li>-->
+<!--    <li>Bananas</li>-->
+<!--    <li>Oranges</li>-->
+<!--  </ul>-->
+<!--</div>-->
+<!--<section id="boxes">-->
+<!--  <div class="container">-->
+<!--    <div class="box">-->
+<!--      <div>-->
+<!--        <p class="result-item">Fast Moving</p>-->
+<!--        <ul>-->
+<!--          <li>Apples</li>-->
+<!--          <li>Bananas</li>-->
+<!--          <li>Oranges</li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <div>-->
+<!--        <p class="result-item">Slow Moving</p>-->
+<!--        <ul>-->
+<!--          <li>Apples</li>-->
+<!--          <li>Bananas</li>-->
+<!--          <li>Oranges</li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--      <div>-->
+<!--        <p class="result-item">Non Moving</p>-->
+<!--        <ul>-->
+<!--          <li>Apples</li>-->
+<!--          <li>Bananas</li>-->
+<!--          <li>Oranges</li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<div class="moving-items-boxes">
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Fast Moving
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Slow Moving
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Non Moving
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>
+  </div>
+</div>
+
+<hr>

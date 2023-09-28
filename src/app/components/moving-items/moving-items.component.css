@@ -1,0 +1,89 @@
+
+/* search.component.css */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  /*gap: 20px;*/
+  width: 80%;
+  align-content: center;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-div label{
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  font-family: cursive;
+}
+.btn-primary{
+  margin-left: 10px;
+  padding: 5px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.moving-items-boxes{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin: 5px;
+}
+
+
+/*!*Boxes*!*/
+
+/*#boxes {*/
+/*  margin-top: 20px;*/
+/*}*/
+
+/*#boxes .box1 {*/
+/*  float: left;*/
+/*  width: 100%;*/
+/*  text-align: center;*/
+/*  padding: 10px;*/
+/*}*/
+
+/*.result-item {*/
+/*  padding: 10px;*/
+/*  margin: 15px;*/
+/*  justify-content: center;*/
+/*  width: 100%;*/
+/*  background-color: #f9f9f9;*/
+/*  border-radius: 5px;*/
+/*  transition: background-color 0.3s ease;*/
+/*}*/
+
+
+/*#boxes .box {*/
+/*  float: left;*/
+/*  width: 30%;*/
+/*  text-align: center;*/
+/*  padding: 10px;*/
+/*  !*width: 300px;*!*/
+/*}*/
+
+/*.container {*/
+/*  width: 100%;*/
+/*  margin: auto;*/
+/*  overflow: hidden;*/
+/*}*/

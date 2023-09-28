@@ -14,7 +14,7 @@
   <div *ngIf="searchResults.length > 0" class="results-container">
     <p>Display search results</p>
     <ul class="results-list">
-      <li *ngFor="let result of searchResults" class="result-item">{{ result }}</li>
+      <p *ngFor="let result of searchResults" class="result-item">{{ result }}</p>
     </ul>
   </div>
 

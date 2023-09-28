@@ -18,9 +18,9 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import {HttpClientModule} from "@angular/common/http";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { MovingItemsDashboardComponent } from './components/moving-items-dashboard/moving-items-dashboard.component';
 import { SearchItemComponent } from './components/search-item/search-item.component';
 import { ShowAvailableItemsComponent } from './components/show-available-items/show-available-items.component';
+import { MovingItemsComponent } from './components/moving-items/moving-items.component';
 
 @NgModule({
   declarations: [
@@ -37,9 +37,9 @@ import { ShowAvailableItemsComponent } from './components/show-available-items/s
     GetDataComponent,
     UserTableComponent,
     DashboardComponent,
-    MovingItemsDashboardComponent,
     SearchItemComponent,
-    ShowAvailableItemsComponent
+    ShowAvailableItemsComponent,
+    MovingItemsComponent
   ],
   imports: [
     BrowserModule,
