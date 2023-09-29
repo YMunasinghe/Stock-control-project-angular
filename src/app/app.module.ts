@@ -21,6 +21,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchItemComponent } from './components/search-item/search-item.component';
 import { ShowAvailableItemsComponent } from './components/show-available-items/show-available-items.component';
 import { MovingItemsComponent } from './components/moving-items/moving-items.component';
+import { CustomerMasterComponent } from './components/customer-master/customer-master.component';
+import { SupplierMasterComponent } from './components/supplier-master/supplier-master.component';
+import { ProductMasterComponent } from './components/product-master/product-master.component';
+import { ProductCompanyMasterComponent } from './components/product-company-master/product-company-master.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { MovingItemsComponent } from './components/moving-items/moving-items.com
     DashboardComponent,
     SearchItemComponent,
     ShowAvailableItemsComponent,
-    MovingItemsComponent
+    MovingItemsComponent,
+    CustomerMasterComponent,
+    SupplierMasterComponent,
+    ProductMasterComponent,
+    ProductCompanyMasterComponent
   ],
   imports: [
     BrowserModule,

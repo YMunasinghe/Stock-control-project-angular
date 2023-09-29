@@ -9,6 +9,8 @@ import {LoggedInComponent} from "./components/logged-in/logged-in.component";
 import {ChangingButtonComponent} from "./components/changing-button/changing-button.component";
 import {GetDataComponent} from "./components/get-data/get-data.component";
 import {SearchItemComponent} from "./components/search-item/search-item.component";
+import {DashboardComponent} from "./components/dashboard/dashboard.component";
+import {CustomerMasterComponent} from "./components/customer-master/customer-master.component";
 
 const routes: Routes = [
   { path: '', component: TopBarComponent },
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'loggedIn', component: LoggedInComponent },
   { path: 'changingButton', component: ChangingButtonComponent },
   { path: 'getData', component: GetDataComponent },
-  { path: 'searchItem', component: SearchItemComponent }
+  { path: 'searchItem', component: SearchItemComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'masterCustomer', component: CustomerMasterComponent }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

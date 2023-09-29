@@ -4,3 +4,57 @@
 p{
   font-family: cursive;
 }
+.main-container{
+  margin-left: 275px;
+  /*margin-top: 10px;*/
+  margin-right: 10px;
+  /*margin-: 10px;*/
+}
+
+.dummy-top-bar{
+  font-family: cursive;
+  margin-left: 265px;
+  color: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*padding: 30px 20px;*/
+  border-radius: 5px;
+  width: calc(100% - 320px);
+}
+
+.search-customer{
+  width: 97%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  background: aliceblue;
+  justify-content: space-between;
+}
+.create-new-and-search-bars{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+}
+.create-new-bar{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+}
+
+.generate-report-bar{
+  width: 97%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  background: aliceblue;
+  justify-content: space-between;
+}

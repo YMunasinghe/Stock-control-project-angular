@@ -11,7 +11,7 @@
   /*left: 265px;*/
   /*width: calc(100% - 320px);*/
   font-family: cursive;
-  margin-left: 270px;
+  margin-left: 265px;
   /*background-color: #333;*/
   color: #fff;
   display: flex;
@@ -19,7 +19,7 @@
   align-items: center;
   padding: 10px 20px;
   border-radius: 5px;
-  width: calc(100% - 270px);
+  width: calc(100% - 265px);
   position: fixed;
   /*margin-top: initial;*/
   z-index: 1;
