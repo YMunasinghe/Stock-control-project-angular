@@ -11,6 +11,7 @@ import {GetDataComponent} from "./components/get-data/get-data.component";
 import {SearchItemComponent} from "./components/search-item/search-item.component";
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {CustomerMasterComponent} from "./components/customer-master/customer-master.component";
+import {PopupCreateNewComponent} from "./components/popup-create-new/popup-create-new.component";
 
 const routes: Routes = [
   { path: '', component: TopBarComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'getData', component: GetDataComponent },
   { path: 'searchItem', component: SearchItemComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'masterCustomer', component: CustomerMasterComponent }
+  { path: 'masterCustomer', component: CustomerMasterComponent },
+  // { path: 'popup', component: PopupCreateNewComponent },
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

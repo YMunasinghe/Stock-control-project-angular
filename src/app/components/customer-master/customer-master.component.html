@@ -14,7 +14,9 @@
   </div>
   <div class="create-new-and-search-bars">
     <div class="create-new-bar">
-      <button type="button" class="btn btn-outline-primary">Create Customer</button>
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Create Customer</button>
+<!--      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>-->
+<!--      <app-popup-create-new *ngIf="isPopupVisible"></app-popup-create-new>-->
     </div>
     <div class="search-customer">
       <p>Search</p>
@@ -28,7 +30,7 @@
 </div>
 
 <div class="show-customer-table">
-  <table class="table">
+  <table class="table" style="font-size: 15px;">
     <thead>
     <tr>
       <th scope="col">
@@ -44,18 +46,49 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr *ngFor="let customer of customers">
       <th scope="row">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckOne">
       </th>
-      <td>Cus01</td>
-      <td>Mark Anthony</td>
-      <td>0789936121</td>
-      <td>chathumal100@gmail.com</td>
-      <td>285/A, Batagama South, Kandana.</td>
-      <td>09/29/2023</td>
-      <td>-</td>
+      <td>{{customer.customerCode}}</td>
+      <td>{{customer.customerName}}</td>
+      <td>{{customer.customerMobile}}</td>
+      <td>{{customer.customerEmail}}</td>
+      <td>{{customer.customerAddress}}</td>
+      <td>{{customer.customerCreatedDate}}</td>
+      <td>{{customer.customerUpdatedDate}}</td>
     </tr>
     </tbody>
   </table>
 </div>
+
+
+
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">New message</h5>-->
+<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <form>-->
+<!--          <div class="mb-3">-->
+<!--            <label for="recipient-name" class="col-form-label">Recipient:</label>-->
+<!--            <input type="text" class="form-control" id="recipient-name">-->
+<!--          </div>-->
+<!--          <div class="mb-3">-->
+<!--            <label for="message-text" class="col-form-label">Message:</label>-->
+<!--            <textarea class="form-control" id="message-text"></textarea>-->
+<!--          </div>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Send message</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<app-popup-create-new [popupHeader]="mainButtonText"></app-popup-create-new>

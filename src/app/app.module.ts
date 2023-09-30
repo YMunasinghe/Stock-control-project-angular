@@ -25,6 +25,7 @@ import { CustomerMasterComponent } from './components/customer-master/customer-m
 import { SupplierMasterComponent } from './components/supplier-master/supplier-master.component';
 import { ProductMasterComponent } from './components/product-master/product-master.component';
 import { ProductCompanyMasterComponent } from './components/product-company-master/product-company-master.component';
+import { PopupCreateNewComponent } from './components/popup-create-new/popup-create-new.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ProductCompanyMasterComponent } from './components/product-company-mast
     CustomerMasterComponent,
     SupplierMasterComponent,
     ProductMasterComponent,
-    ProductCompanyMasterComponent
+    ProductCompanyMasterComponent,
+    PopupCreateNewComponent
   ],
   imports: [
     BrowserModule,

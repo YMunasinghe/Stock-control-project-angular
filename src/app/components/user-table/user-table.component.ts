@@ -19,7 +19,5 @@ export class UserTableComponent {
       console.log("users",user);
       this.users=user;
     })
-    // this.users= USERS;
-    // console.log(this.users)
   }
 }
