@@ -1,11 +1,6 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {UserService} from "../../Service/user.service";
+import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
 import {CustomerService} from "../../Service/customer.service";
-// import { PopupCreateNewComponent } from
-// import { PopupCreateNewComponent } from './popup-create-new.component';
-// import { PopupCreateNewComponent } from './components/popup-create-new/popup-create-new.component';
-// import { PopupService } from '../popup.service'; // Adjust the import path
-declare var $: any;
+import { jsPDF } from "jspdf";
 
 @Component({
   selector: 'app-customer-master',
@@ -13,6 +8,8 @@ declare var $: any;
   styleUrls: ['./customer-master.component.css'],
 })
 export class CustomerMasterComponent {
+
+  @ViewChild('customer_table', {static:false}) el!:ElementRef;
 
   customers: any = [];
 
@@ -25,6 +22,22 @@ export class CustomerMasterComponent {
     this.customerService.getCustomers().subscribe((customer)=>{
       console.log("users",customer);
       this.customers=customer;
+    })
+  }
+
+  // const doc = new jsPDF();
+  makePDF(){
+    // let pdf=new jsPDF('p','pt','a4');
+    let pdf=new jsPDF({
+      orientation: 'landscape',
+      unit: 'pt',
+      format: 'a4',
+    });
+
+    pdf.html(this.el.nativeElement,{
+      callback: (pdf)=> {
+        pdf.save("customers.pdf");
+      }
     })
   }
 }
