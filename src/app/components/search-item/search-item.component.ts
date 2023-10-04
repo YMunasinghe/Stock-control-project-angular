@@ -12,7 +12,7 @@ export class SearchItemComponent {
   constructor() { }
 
   search(): void {
-    // Implement your search logic here
+    // search logic
     // This could involve making HTTP requests to a backend service or filtering data locally
     // For simplicity, we'll just split the search term by space and return matching results
 
@@ -21,7 +21,7 @@ export class SearchItemComponent {
       return;
     }
 
-    const searchTerms = this.searchTerm.split(' ');
+    const searchTerms = this.searchTerm.split('');
     // Mock data for demonstration purposes
     const data = ['Result 1', 'Result 2', 'Result 3', 'Result 4', 'Result 5'];
 
@@ -29,5 +29,4 @@ export class SearchItemComponent {
       return searchTerms.every(term => result.toLowerCase().includes(term.toLowerCase()));
     });
   }
-
 }
