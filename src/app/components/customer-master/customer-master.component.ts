@@ -1,6 +1,7 @@
 import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
 import {CustomerService} from "../../Service/customer.service";
 import { jsPDF } from "jspdf";
+// import { DataService } from '../../Service/customer.service';
 
 @Component({
   selector: 'app-customer-master',
@@ -14,8 +15,8 @@ export class CustomerMasterComponent {
   customers: any = [];
   customersSecond: any = [];
 
-  customerSearchTerm: string = '';
-  searchResults: string[] = [];
+  customerSearchTerm: any = '';
+  searchResults: any[] = [];
 
   constructor(private customerService : CustomerService) {}
 
@@ -23,29 +24,42 @@ export class CustomerMasterComponent {
   mainButtonText: string = 'Create Customer'; // Define and initialize the variable
 
   ngOnInit() {
-    this.customerService.getCustomers().subscribe((customer)=>{
-      console.log("users",customer);
+      this.customerService.getCustomers().subscribe((customer)=>{
+      // console.log("users",customer);
       this.customers=customer;
       this.searchCustomer();
     })
 
   }
 
-  searchCustomer(): void {
-    // Implement your search logic here
-    // This could involve making HTTP requests to a backend service or filtering data locally
-    // For simplicity, we'll just split the search term by space and return matching results
 
+  /**
+   * This method is for search Customer
+   */
+  searchCustomer(): void {
     /**
-     * have to sort by name part to do
+     * According to this code
+     *  if do not enter any search character
+     *    return all the customers
+     *  else
+     *    return customers including entered characters in their names
      */
     if (this.customerSearchTerm.trim() === '') {
       this.customersSecond = this.customers;
       return;
     }else {
-      this.customersSecond = [];
+      // this.customersSecond = [];
+      this.customerService.setCustomerName(this.customerSearchTerm);
+      // @ts-ignore
+      this.customerService.searchCustomer().subscribe((customer)=>{
+        // console.log("users",customer);
+        this.customersSecond=customer;
+        this.searchCustomer();
+      })
       return;
     }
+
+
 
     // const searchTerms = this.searchTerm.split(' ');
     // // Mock data for demonstration purposes
