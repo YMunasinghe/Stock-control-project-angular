@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {CustomerService} from "../../Service/customer.service";
 import { jsPDF } from "jspdf";
 // import { DataService } from '../../Service/customer.service';
@@ -15,6 +15,13 @@ export class CustomerMasterComponent {
   customers: any = [];
   customersSecond: any = [];
 
+  @Input() customerCode: any;
+  @Input() customerName: any;
+  @Input() customerContactPerson: any;
+  @Input() customerMobile: any;
+  @Input() customerEmail: any;
+  @Input() customerAddress: any;
+
   customerSearchTerm: any = '';
   searchResults: any[] = [];
 
@@ -28,8 +35,14 @@ export class CustomerMasterComponent {
       // console.log("users",customer);
       this.customers=customer;
       this.searchCustomer();
-    })
 
+      console.log(this.customerCode);
+      console.log(this.customerName);
+      console.log(this.customerContactPerson);
+      console.log(this.customerMobile);
+      console.log(this.customerEmail);
+      console.log(this.customerAddress);
+    })
   }
 
 
@@ -39,7 +52,7 @@ export class CustomerMasterComponent {
   searchCustomer(): void {
     /**
      * According to this code
-     *  if do not enter any search character
+     *  if there do not enter any search character
      *    return all the customers
      *  else
      *    return customers including entered characters in their names
@@ -58,19 +71,11 @@ export class CustomerMasterComponent {
       })
       return;
     }
-
-
-
-    // const searchTerms = this.searchTerm.split(' ');
-    // // Mock data for demonstration purposes
-    // // const data = ['Result 1', 'Result 2', 'Result 3', 'Result 4', 'Result 5'];
-
-    // this.searchResults = this.customers.filter(result => {
-    //   return searchTerms.every(term => result.toLowerCase().includes(term.toLowerCase()));
-    // });
   }
 
-  // const doc = new jsPDF();
+  /**
+   * This code help to save pdf of customers
+   */
   makePDF(){
     // let pdf=new jsPDF('p','pt','a4');
     let pdf=new jsPDF({
