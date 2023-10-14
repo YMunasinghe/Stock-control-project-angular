@@ -26,6 +26,7 @@ import { SupplierMasterComponent } from './components/supplier-master/supplier-m
 import { ProductMasterComponent } from './components/product-master/product-master.component';
 import { ProductCompanyMasterComponent } from './components/product-company-master/product-company-master.component';
 import { PopupCreateNewComponent } from './components/popup-create-new/popup-create-new.component';
+import { MomentModule } from 'ngx-moment';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { PopupCreateNewComponent } from './components/popup-create-new/popup-cre
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MomentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

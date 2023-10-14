@@ -15,12 +15,16 @@ export class CustomerMasterComponent {
   customers: any = [];
   customersSecond: any = [];
 
-  @Input() customerCode: any;
-  @Input() customerName: any;
-  @Input() customerContactPerson: any;
-  @Input() customerMobile: any;
-  @Input() customerEmail: any;
-  @Input() customerAddress: any;
+  // @Input() code: any;
+  // @Input() customerName: any;
+  // @Input() customerContactPerson: any;
+  // @Input() customerMobile: any;
+  // @Input() customerEmail: any;
+  // @Input() customerAddress: any;
+
+  gettingData() {
+
+  }
 
   customerSearchTerm: any = '';
   searchResults: any[] = [];
@@ -28,7 +32,7 @@ export class CustomerMasterComponent {
   constructor(private customerService : CustomerService) {}
 
   // Name for Create new popup modal
-  mainButtonText: string = 'Create Customer'; // Define and initialize the variable
+  customerMainButtonText: string = 'Create Customer'; // Define and initialize the variable
 
   ngOnInit() {
       this.customerService.getCustomers().subscribe((customer)=>{
@@ -36,12 +40,15 @@ export class CustomerMasterComponent {
       this.customers=customer;
       this.searchCustomer();
 
-      console.log(this.customerCode);
-      console.log(this.customerName);
-      console.log(this.customerContactPerson);
-      console.log(this.customerMobile);
-      console.log(this.customerEmail);
-      console.log(this.customerAddress);
+
+      // if(this.code !== undefined){
+      //   console.log(this.code);
+      //   console.log(this.customerName);
+      //   console.log(this.customerContactPerson);
+      //   console.log(this.customerMobile);
+      //   console.log(this.customerEmail);
+      //   console.log(this.customerAddress);
+      // }
     })
   }
 

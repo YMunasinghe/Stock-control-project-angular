@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {CustomerDTO} from "./customer";
+// import {CustomerDTO} from "./customer";
+import {CustomerDTO} from "../customer";
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,7 @@ export class CustomerService {
     return this.httpClient.get<any>(`${this.apiUrl}`+'/customer/getCustomerByName/'+`${this.customerName}`);
   }
 
-  saveStudent(customer?:CustomerDTO): Observable<object>{
+  saveCustomer(customer?:CustomerDTO): Observable<object>{
     return this.httpClient.post<object>(`http://localhost:8080/customer/addCustomer`,customer);
 
   }

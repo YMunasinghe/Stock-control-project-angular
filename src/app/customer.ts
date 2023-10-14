@@ -6,5 +6,7 @@ export class CustomerDTO{
   customerEmail?:string;
   customerAddress?:string;
   customerCreatedDate?:string;
-  customerupdatedDate?:string;
+  customerCreatedTime?:string;
+  customerUpdatedDate?:string;
+  customerUpdatedTime?:string;
 }

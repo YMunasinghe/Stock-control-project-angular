@@ -1,6 +1,12 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {setAnalyticsConfig} from "@angular/cli/src/analytics/analytics";
 // import {PopupService} from "../popup.service";
+// import {CustomerDTO} from "../../Service/customer";
+// import {CustomerDTO} from "../customer";
+// import { CustomerDTO } from './app/customer';
+import * as moment from 'moment';
+import {CustomerDTO} from "../../customer";
+import {CustomerService} from "../../Service/customer.service";
 
 @Component({
   selector: 'app-popup-create-new',
@@ -8,6 +14,8 @@ import {setAnalyticsConfig} from "@angular/cli/src/analytics/analytics";
   styleUrls: ['./popup-create-new.component.css']
 })
 export class PopupCreateNewComponent {
+
+  customerDTO : CustomerDTO = new CustomerDTO();
 
   // constructor() {}
   // constructor(public popupService: PopupService) {}
@@ -18,6 +26,9 @@ export class PopupCreateNewComponent {
   //   this.receivedData = data;
   // }
   @Input() popupHeader: string='';
+  @Input() checkCustomerHeader: string='';
+
+  // currentDate = moment();
 
   codeTerm: any='';
   nameTerm: any='';
@@ -27,21 +38,18 @@ export class PopupCreateNewComponent {
   addressTerm: any='';
 
   @Output() code = new EventEmitter<any>();
-  @Output() name = new EventEmitter<any>();
-  @Output() contactPerson = new EventEmitter<any>();
-  @Output() mobile = new EventEmitter<any>();
-  @Output() email = new EventEmitter<any>();
-  @Output() address = new EventEmitter<any>();
+  // @Output() name = new EventEmitter<any>();
+  // @Output() contactPerson = new EventEmitter<any>();
+  // @Output() mobile = new EventEmitter<any>();
+  // @Output() email = new EventEmitter<any>();
+  // @Output() address = new EventEmitter<any>();
 
   // confirmPurchase:any=[];
 
-  constructor() {}
+  constructor(private customerService:CustomerService) {}
 
   ngOnInit(){
-    if (this.popupHeader=='Create Customer'){
-    }
   }
-
   // onClickSubmit(data: any) {
   //   this.confirmPurchase.push(data)
   //   console.log(this.confirmPurchase)
@@ -49,11 +57,43 @@ export class PopupCreateNewComponent {
   //   this.router.navigate(['/confirmation'])
   // }
   saveData() {
-    this.code.emit(this.codeTerm)
-    this.name.emit(this.nameTerm)
-    this.contactPerson.emit(this.contactPersonTerm)
-    this.mobile.emit(this.mobileTerm)
-    this.email.emit(this.emailTerm)
-    this.address.emit(this.addressTerm)
-  }
+    if (this.codeTerm!==''){
+      const now = new Date();
+      // this.code.emit(this.codeTerm)
+      // this.name.emit(this.nameTerm)
+      // this.contactPerson.emit(this.contactPersonTerm)
+      // this.mobile.emit(this.mobileTerm)
+      // this.email.emit(this.emailTerm)
+      // this.address.emit(this.addressTerm)
+
+      // if(this.codeTerm!==null){
+
+      /**
+       * code to save the data
+       */
+      if (this.popupHeader==this.checkCustomerHeader){
+        this.customerDTO.customerCode=this.codeTerm
+        this.customerDTO.customerName=this.nameTerm
+        this.customerDTO.customerContactPerson=this.contactPersonTerm
+        this.customerDTO.customerMobile=this.mobileTerm
+        this.customerDTO.customerEmail=this.emailTerm
+        this.customerDTO.customerAddress=this.addressTerm
+        this.customerDTO.customerCreatedDate=now.getDate().toString()+"-"+now.getMonth().toString()+"-"+now.getFullYear().toString();
+        this.customerDTO.customerCreatedTime=moment().format('HH:mm:ss')
+        this.customerDTO.customerUpdatedDate=now.getDate().toString()+"-"+now.getMonth().toString()+"-"+now.getFullYear().toString();
+        this.customerDTO.customerUpdatedTime=moment().format('HH:mm:ss')
+
+        this.customerService.saveCustomer(this.customerDTO)
+          .subscribe();
+      }
+      // }
+      // console.log(this.codeTerm)
+      this.codeTerm='';
+      this.nameTerm='';
+      this.contactPersonTerm='';
+      this.mobileTerm='';
+      this.emailTerm='';
+      this.addressTerm='';
+    }
+    }
 }
