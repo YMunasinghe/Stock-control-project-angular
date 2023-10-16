@@ -7,7 +7,7 @@
 <!--</div>-->
 <!--<app-customer-master (dataEvent)="handleDataFromChild($event)"></app-customer-master>-->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="popupModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="padding: 5px;">
@@ -16,7 +16,7 @@
         <h5 class="modal-title" id="exampleModalLabel">{{ popupHeader }}</h5>
 
 
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="clearTheForm()"></button>
       </div>
       <div class="modal-body" style="padding: 10px;">
         <form>
@@ -51,10 +51,33 @@
         </form>
       </div>
       <div class="modal-footer" style="padding: 5px;">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" (click)="saveData()">Save</button>
+        <p style="color: #03C988; font-size: 15px; margin-left: 0;" [ngStyle]="{color:textColor}">{{showAfterCreated}}</p>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="clearTheForm()">Close</button>
+        <button type="button" class="btn btn-primary"  (click)="saveData()">Save</button>
       </div>
     </div>
   </div>
 </div>
 
+<!--(click)="saveData()"-->
+<!--<div id="saveConfirmationPopup" class="modal-dialog modal-fullscreen-sm-down">-->
+<!--  <h1>fuck you</h1>-->
+<!--</div>-->
+
+<!--confirmation modal-->
+<!--<div class="modal" id="myPopup">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title">This is a popup</h5>-->
+<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <p>This is the content of the popup.</p>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

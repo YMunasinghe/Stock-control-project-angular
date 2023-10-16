@@ -7,6 +7,7 @@ import {setAnalyticsConfig} from "@angular/cli/src/analytics/analytics";
 import * as moment from 'moment';
 import {CustomerDTO} from "../../customer";
 import {CustomerService} from "../../Service/customer.service";
+import {timeout} from "rxjs";
 
 @Component({
   selector: 'app-popup-create-new',
@@ -27,6 +28,13 @@ export class PopupCreateNewComponent {
   // }
   @Input() popupHeader: string='';
   @Input() checkCustomerHeader: string='';
+
+  /**
+   * use to show
+   *  new customer created or not
+   */
+  showAfterCreated: string='';
+  textColor: string=''; // set text color to previous text
 
   // currentDate = moment();
 
@@ -56,8 +64,10 @@ export class PopupCreateNewComponent {
   //   this.sharedService.setCartItemData(this.confirmPurchase);
   //   this.router.navigate(['/confirmation'])
   // }
+
+
   saveData() {
-    if (this.codeTerm!==''){
+    if (this.codeTerm!=='' && this.nameTerm!==''){
       const now = new Date();
       // this.code.emit(this.codeTerm)
       // this.name.emit(this.nameTerm)
@@ -66,8 +76,12 @@ export class PopupCreateNewComponent {
       // this.email.emit(this.emailTerm)
       // this.address.emit(this.addressTerm)
 
+      this.textColor='#03C988';
+      this.showAfterCreated='Successfully Created '+this.codeTerm;
+      setTimeout(()=>{
+        this.showAfterCreated='';
+      },3000);
       // if(this.codeTerm!==null){
-
       /**
        * code to save the data
        */
@@ -94,6 +108,23 @@ export class PopupCreateNewComponent {
       this.mobileTerm='';
       this.emailTerm='';
       this.addressTerm='';
+    }else {
+      this.textColor='red';
+      this.showAfterCreated='Customer details required'+this.codeTerm;
+
+      setTimeout(()=>{
+        this.showAfterCreated='';
+      },3000);
     }
-    }
+  }
+
+
+  clearTheForm() {
+    this.codeTerm='';
+    this.nameTerm='';
+    this.contactPersonTerm='';
+    this.mobileTerm='';
+    this.emailTerm='';
+    this.addressTerm='';
+  }
 }
