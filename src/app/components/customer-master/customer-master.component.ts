@@ -1,6 +1,8 @@
 import {Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
-import {CustomerService} from "../../Service/customer.service";
+import {DataService} from "../../Service/data.service";
 import { jsPDF } from "jspdf";
+// import {PopupCreateNewComponent} from "../popup-create-new/popup-create-new.component";
+
 // import { DataService } from '../../Service/customer.service';
 
 @Component({
@@ -29,7 +31,7 @@ export class CustomerMasterComponent {
   customerSearchTerm: any = '';
   searchResults: any[] = [];
 
-  constructor(private customerService : CustomerService) {}
+  constructor(private customerService : DataService) {}
 
   // Name for Create new popup modal
   customerMainButtonText: string = 'Create Customer'; // Define and initialize the variable
@@ -40,6 +42,7 @@ export class CustomerMasterComponent {
       this.customers=customer;
       this.searchCustomer();
 
+      // this.popUp.refreshTa
 
       // if(this.code !== undefined){
       //   console.log(this.code);
@@ -86,7 +89,7 @@ export class CustomerMasterComponent {
   makePDF(){
     // let pdf=new jsPDF('p','pt','a4');
     let pdf=new jsPDF({
-      orientation: 'landscape',
+      orientation: 'portrait',
       unit: 'pt',
       format: 'a4',
     });

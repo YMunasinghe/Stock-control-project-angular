@@ -24,9 +24,9 @@ import { MovingItemsComponent } from './components/moving-items/moving-items.com
 import { CustomerMasterComponent } from './components/customer-master/customer-master.component';
 import { SupplierMasterComponent } from './components/supplier-master/supplier-master.component';
 import { ProductMasterComponent } from './components/product-master/product-master.component';
-import { ProductCompanyMasterComponent } from './components/product-company-master/product-company-master.component';
 import { PopupCreateNewComponent } from './components/popup-create-new/popup-create-new.component';
 import { MomentModule } from 'ngx-moment';
+import { ProductCategoryComponent } from './components/product-category/product-category.component';
 
 @NgModule({
   declarations: [
@@ -49,8 +49,8 @@ import { MomentModule } from 'ngx-moment';
     CustomerMasterComponent,
     SupplierMasterComponent,
     ProductMasterComponent,
-    ProductCompanyMasterComponent,
-    PopupCreateNewComponent
+    PopupCreateNewComponent,
+    ProductCategoryComponent
   ],
   imports: [
     BrowserModule,

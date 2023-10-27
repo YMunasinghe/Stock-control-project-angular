@@ -12,6 +12,8 @@ import {SearchItemComponent} from "./components/search-item/search-item.componen
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {CustomerMasterComponent} from "./components/customer-master/customer-master.component";
 import {PopupCreateNewComponent} from "./components/popup-create-new/popup-create-new.component";
+import {SupplierMasterComponent} from "./components/supplier-master/supplier-master.component";
+import {ProductCategoryComponent} from "./components/product-category/product-category.component";
 
 const routes: Routes = [
   { path: '', component: TopBarComponent },
@@ -24,7 +26,8 @@ const routes: Routes = [
   { path: 'searchItem', component: SearchItemComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'masterCustomer', component: CustomerMasterComponent },
-  // { path: 'popup', component: PopupCreateNewComponent },
+  { path: 'masterSupplier', component: SupplierMasterComponent },
+  { path: 'productCategory', component: ProductCategoryComponent },
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

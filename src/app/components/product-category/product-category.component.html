@@ -1,0 +1,63 @@
+
+<app-logged-in-top-bar></app-logged-in-top-bar>
+<app-side-nav-bar></app-side-nav-bar>
+<div class="main-container">
+  <div class="dummy-top-bar">
+
+  </div>
+
+  <h3 style="padding-bottom: 20px; padding-top: 20px;">Product Category</h3>
+  <div class="generate-report-bar">
+    <p>Generate Report</p>
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button type="button" class="btn btn-outline-primary">Excel</button>
+      <button type="button" class="btn btn-outline-primary" (click)="makePDF()">PDF</button>
+    </div>
+  </div>
+  <div class="create-new-and-search-bars">
+    <div class="create-new-bar">
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#popupModal" >Create Product Category</button>
+
+    </div>
+    <div class="search-customer">
+      <p>Search</p>
+      <div class="input-group input-group-sm mb-3">
+        <!--        <input type="text" class="form-control" placeholder="Code" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">-->
+        <input
+          type="text" class="form-control" placeholder="Customer Name" aria-label="Sizing input" aria-describedby="inputGroup-sizing-sm"
+          [(ngModel)]="customerSearchTerm"
+          (input)="searchProductCategory()"
+        />
+        <!--        <button type="button" class="btn btn-primary">Enter</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="show-product-category-table">
+  <table class="table" style="font-size: 15px;" id="customer-table" #product_category_table>
+    <thead>
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+<!--      <th scope="col">Contact Person</th>-->
+<!--      <th scope="col">Mobile</th>-->
+<!--      <th scope="col">Email</th>-->
+      <!--      <th scope="col">Address</th>-->
+      <!--      <th scope="col"> </th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product_category of productCategorySecond">
+      <td>{{product_category.productCategoryCode}}</td>
+      <td>{{product_category.productCategoryName}}</td>
+<!--      <td>{{product_category.productCategoryContactPerson}}</td>-->
+<!--      <td>{{product_category.productCategoryMobile}}</td>-->
+<!--      <td>{{product_category.productCategoryEmail}}</td>-->
+      <!--      <td>{{customer.customerAddress}}</td>-->
+      <!--      <td>{{customer.customerAddress}}</td>-->
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-popup-create-new [popupHeader]="productCategoryMainButtonText" [checkCustomerHeader]="productCategoryMainButtonText"></app-popup-create-new>

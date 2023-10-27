@@ -6,8 +6,13 @@ import {setAnalyticsConfig} from "@angular/cli/src/analytics/analytics";
 // import { CustomerDTO } from './app/customer';
 import * as moment from 'moment';
 import {CustomerDTO} from "../../customer";
-import {CustomerService} from "../../Service/customer.service";
+import {DataService} from "../../Service/data.service";
 import {timeout} from "rxjs";
+import {SupplierDTO} from "../../supplier";
+import {Router} from "@angular/router";
+import {CustomerMasterComponent} from "../customer-master/customer-master.component";
+import {SupplierMasterComponent} from "../supplier-master/supplier-master.component";
+
 
 @Component({
   selector: 'app-popup-create-new',
@@ -16,7 +21,12 @@ import {timeout} from "rxjs";
 })
 export class PopupCreateNewComponent {
 
+
+
   customerDTO : CustomerDTO = new CustomerDTO();
+  supplierDTO : SupplierDTO = new SupplierDTO();
+
+  // customerMaster : CustomerMasterComponent = new CustomerMasterComponent();
 
   // constructor() {}
   // constructor(public popupService: PopupService) {}
@@ -28,6 +38,9 @@ export class PopupCreateNewComponent {
   // }
   @Input() popupHeader: string='';
   @Input() checkCustomerHeader: string='';
+  @Input() checkSupplierHeader: string='';
+
+  // refreshTableOnCreateNew: boolean=false;
 
   /**
    * use to show
@@ -54,7 +67,7 @@ export class PopupCreateNewComponent {
 
   // confirmPurchase:any=[];
 
-  constructor(private customerService:CustomerService) {}
+  constructor(private dataService:DataService, private router:Router) {}
 
   ngOnInit(){
   }
@@ -82,8 +95,9 @@ export class PopupCreateNewComponent {
         this.showAfterCreated='';
       },3000);
       // if(this.codeTerm!==null){
+
       /**
-       * code to save the data
+       * code to save the customer data
        */
       if (this.popupHeader==this.checkCustomerHeader){
         this.customerDTO.customerCode=this.codeTerm
@@ -97,9 +111,33 @@ export class PopupCreateNewComponent {
         this.customerDTO.customerUpdatedDate=now.getDate().toString()+"-"+now.getMonth().toString()+"-"+now.getFullYear().toString();
         this.customerDTO.customerUpdatedTime=moment().format('HH:mm:ss')
 
-        this.customerService.saveCustomer(this.customerDTO)
+        this.dataService.saveCustomer(this.customerDTO)
           .subscribe();
       }
+
+      /**
+       * code to save the supplier data
+       */
+      else if (this.popupHeader==this.checkSupplierHeader){
+        this.supplierDTO.supplierCode=this.codeTerm
+        this.supplierDTO.supplierName=this.nameTerm
+        this.supplierDTO.supplierContactPerson=this.contactPersonTerm
+        this.supplierDTO.supplierMobile=this.mobileTerm
+        this.supplierDTO.supplierEmail=this.emailTerm
+        this.supplierDTO.supplierAddress=this.addressTerm
+        this.supplierDTO.supplierCreatedDate=now.getDate().toString()+"-"+now.getMonth().toString()+"-"+now.getFullYear().toString();
+        this.supplierDTO.supplierCreatedTime=moment().format('HH:mm:ss')
+        this.supplierDTO.supplierUpdatedDate=now.getDate().toString()+"-"+now.getMonth().toString()+"-"+now.getFullYear().toString();
+        this.supplierDTO.supplierUpdatedTime=moment().format('HH:mm:ss')
+
+        this.dataService.saveSuppliers(this.supplierDTO)
+          .subscribe();
+        // this.router.navigate(['/masterSupplier']);
+        // this.refreshTableOnCreateNew=true;
+        // this.customerMaster.ngOnInit();
+      }
+
+
       // }
       // console.log(this.codeTerm)
       this.codeTerm='';
@@ -126,5 +164,15 @@ export class PopupCreateNewComponent {
     this.mobileTerm='';
     this.emailTerm='';
     this.addressTerm='';
+
+    location.reload();
   }
+
+
+  // onKeyPress(event: KeyboardEvent) {
+  //   if (event.key === 'Escape') {
+  //     // Handle the ESC key press here
+  //     this.clearTheForm();
+  //   }
+  // }
 }

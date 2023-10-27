@@ -1,6 +1,7 @@
 .top-bar {
   /*margin: 4px;*/
-  background-color: #18283b;
+  /*background-color: #18283b;*/
+  background-color: #04364A;
   /*color: #fff;*/
   /*display: flex;*/
   /*justify-content: space-between;*/
@@ -11,15 +12,15 @@
   /*left: 265px;*/
   /*width: calc(100% - 320px);*/
   font-family: cursive;
-  margin-left: 265px;
+  margin-left: 230px;
   /*background-color: #333;*/
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-radius: 5px;
-  width: calc(100% - 265px);
+  /*border-radius: 5px;*/
+  width: calc(100% - 230px);
   position: fixed;
   /*margin-top: initial;*/
   z-index: 10;
