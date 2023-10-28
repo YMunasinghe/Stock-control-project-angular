@@ -175,4 +175,6 @@ export class PopupCreateNewComponent {
   //     this.clearTheForm();
   //   }
   // }
+  // hidePriceLabel: any;
+  // showPriceLabel: any = ;
 }

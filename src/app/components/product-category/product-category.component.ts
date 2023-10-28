@@ -14,6 +14,8 @@ export class ProductCategoryComponent {
   productCategories: any = [];
   productCategorySecond: any = [];
 
+  hidePriceLabel = false;
+
   customerSearchTerm: any = '';
   searchResults: any[] = [];
   // Name for Create new popup modal
@@ -23,9 +25,9 @@ export class ProductCategoryComponent {
 
   ngOnInit() {
     this.allService.getProductCategories().subscribe((productCategory)=>{
-      // console.log("users",customer);
+      console.log("categories",productCategory);
       this.productCategories=productCategory;
-      // this.searchProductCategory();
+      this.searchProductCategory();
     })
   }
 
@@ -44,16 +46,16 @@ export class ProductCategoryComponent {
     if (this.customerSearchTerm.trim() === '') {
       this.productCategorySecond = this.productCategories;
       return;
-    // }else {
-    //   // this.customersSecond = [];
-    //   this.customerService.setCustomerName(this.customerSearchTerm);
-    //   // @ts-ignore
-    //   this.customerService.searchCustomer().subscribe((customer)=>{
-    //     // console.log("users",customer);
-    //     this.productCategorySecond=customer;
-    //     this.searchProductCategory();
-    //   })
-    //   return;
+    }else {
+      // this.customersSecond = [];
+      this.allService.setCustomerName(this.customerSearchTerm);
+      // @ts-ignore
+      this.allService.searchCustomer().subscribe((customer)=>{
+        // console.log("users",customer);
+        this.productCategorySecond=customer;
+        this.searchProductCategory();
+      })
+      return;
     }
   }
 
