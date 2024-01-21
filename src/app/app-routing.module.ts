@@ -14,6 +14,7 @@ import {CustomerMasterComponent} from "./components/customer-master/customer-mas
 import {PopupCreateNewComponent} from "./components/popup-create-new/popup-create-new.component";
 import {SupplierMasterComponent} from "./components/supplier-master/supplier-master.component";
 import {ProductCategoryComponent} from "./components/product-category/product-category.component";
+import {UserTableComponent} from "./components/user-table/user-table.component";
 
 const routes: Routes = [
   { path: '', component: TopBarComponent },
@@ -28,6 +29,8 @@ const routes: Routes = [
   { path: 'masterCustomer', component: CustomerMasterComponent },
   { path: 'masterSupplier', component: SupplierMasterComponent },
   { path: 'productCategory', component: ProductCategoryComponent },
+  { path: 'userTable', component: UserTableComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

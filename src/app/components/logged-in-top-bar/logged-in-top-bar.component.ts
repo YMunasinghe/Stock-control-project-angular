@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {faAngleDown, faAngleUp, faUserPlus} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-logged-in-top-bar',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class LoggedInTopBarComponent {
 
+    protected readonly faUserPlus = faUserPlus;
+    protected readonly faAngleUp = faAngleUp;
 }

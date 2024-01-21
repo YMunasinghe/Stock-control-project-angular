@@ -16,7 +16,7 @@ export class ProductCategoryComponent {
 
   hidePriceLabel = false;
 
-  customerSearchTerm: any = '';
+  productCategorySearchTerm: any = '';
   searchResults: any[] = [];
   // Name for Create new popup modal
   productCategoryMainButtonText: string = 'Create Product Category'; // Define and initialize the variable
@@ -43,16 +43,16 @@ export class ProductCategoryComponent {
      *  else
      *    return customers including entered characters in their names
      */
-    if (this.customerSearchTerm.trim() === '') {
+    if (this.productCategorySearchTerm.trim() === '') {
       this.productCategorySecond = this.productCategories;
       return;
     }else {
       // this.customersSecond = [];
-      this.allService.setCustomerName(this.customerSearchTerm);
+      this.allService.setProductCategoryName(this.productCategorySearchTerm);
       // @ts-ignore
-      this.allService.searchCustomer().subscribe((customer)=>{
+      this.allService.searchProductCategory().subscribe((productCategory)=>{
         // console.log("users",customer);
-        this.productCategorySecond=customer;
+        this.productCategorySecond=productCategory;
         this.searchProductCategory();
       })
       return;

@@ -27,6 +27,8 @@ import { ProductMasterComponent } from './components/product-master/product-mast
 import { PopupCreateNewComponent } from './components/popup-create-new/popup-create-new.component';
 import { MomentModule } from 'ngx-moment';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { ProductCategoryComponent } from './components/product-category/product-
     SupplierMasterComponent,
     ProductMasterComponent,
     PopupCreateNewComponent,
-    ProductCategoryComponent
+    ProductCategoryComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { ProductCategoryComponent } from './components/product-category/product-
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    MomentModule
+    MomentModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {faAngleDown, faAngleUp} from "@fortawesome/free-solid-svg-icons";
+import {faAngleDown, faAngleUp, faUserPlus} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-side-nav-bar',
@@ -24,4 +24,5 @@ export class SideNavBarComponent {
 
   protected readonly faAngleDown = faAngleDown;
   protected readonly faAngleUp = faAngleUp;
+
 }

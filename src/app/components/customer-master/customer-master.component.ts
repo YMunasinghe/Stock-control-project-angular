@@ -17,13 +17,6 @@ export class CustomerMasterComponent {
   customers: any = [];
   customersSecond: any = [];
 
-  // @Input() code: any;
-  // @Input() customerName: any;
-  // @Input() customerContactPerson: any;
-  // @Input() customerMobile: any;
-  // @Input() customerEmail: any;
-  // @Input() customerAddress: any;
-
   gettingData() {
 
   }
@@ -41,18 +34,7 @@ export class CustomerMasterComponent {
       // console.log("users",customer);
       this.customers=customer;
       this.searchCustomer();
-
-      // this.popUp.refreshTa
-
-      // if(this.code !== undefined){
-      //   console.log(this.code);
-      //   console.log(this.customerName);
-      //   console.log(this.customerContactPerson);
-      //   console.log(this.customerMobile);
-      //   console.log(this.customerEmail);
-      //   console.log(this.customerAddress);
-      // }
-    })
+      })
   }
 
 

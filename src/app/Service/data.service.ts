@@ -13,7 +13,15 @@ export class DataService {
   private apiUrl='http://localhost:8080';
   private customerName: any='';
   private supplierName: any='';
+  private productCategoryName: any='';
 
+  setProductCategoryName(data: any): void {
+    this.productCategoryName = data;
+  }
+
+  getProductCategoryName(): any {
+    return this.productCategoryName;
+  }
 
   setCustomerName(data: any): void {
     this.customerName = data;
@@ -61,6 +69,10 @@ export class DataService {
 
   getProductCategories():Observable<any>{
     return this.httpClient.get<any>(`${this.apiUrl}`+'/productCategory/getAllProductCategories');
+  }
+
+  searchProductCategory():Observable<any>{
+    return this.httpClient.get<any>(`${this.apiUrl}`+'/supplier/getSupplierByName/'+`${this.supplierName}`);
   }
 
 

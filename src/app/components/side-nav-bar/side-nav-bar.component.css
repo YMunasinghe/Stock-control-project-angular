@@ -97,6 +97,15 @@ hr {
 ul {
   list-style-type: none;
   padding: 0;
+
+}
+
+.createUser{
+  /*margin-left: 15px;*/
+  /*display: flex;*/
+  /*margin-top: 30vh;*/
+  bottom: 0;
+  margin-top: calc(100% - 30%);
 }
 
 /*style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px"*/

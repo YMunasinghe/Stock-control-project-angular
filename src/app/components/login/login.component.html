@@ -1,11 +1,13 @@
-<div class="login-container">
-  <div class="login-box">
-    <h2>Login</h2>
-    <form (ngSubmit)="userLogin()">
-      <input type="text" [(ngModel)]="user.userId" placeholder="Username" id="UserId" name="userId">
-      <input type="password" [(ngModel)]="user.password" placeholder="Password" id="password" name="password">
-      <button type="submit">Login</button>
-    </form>
+<div >
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form (ngSubmit)="userLogin()">
+        <input type="text" [(ngModel)]="user.userId" placeholder="Username" id="UserId" name="userId">
+        <input type="password" [(ngModel)]="user.password" placeholder="Password" id="password" name="password">
+        <button [@fadeInAnimation]="animationTrigger" type="submit">Login</button>
+      </form>
+    </div>
+    <div class="animation"></div>
   </div>
-  <div class="animation"></div>
 </div>
