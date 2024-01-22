@@ -34,7 +34,6 @@ export class SupplierMasterComponent {
       this.suppliers=supplier;
       this.searchSupplier();
 
-
       // if(this.code !== undefined){
       //   console.log(this.code);
       //   console.log(this.customerName);
@@ -45,7 +44,6 @@ export class SupplierMasterComponent {
       // }
     })
   }
-
 
   /**
    * This method is for search Customer

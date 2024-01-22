@@ -8,6 +8,10 @@ import {faUserPlus} from "@fortawesome/free-solid-svg-icons";
 })
 export class AddUserComponent {
 
+  ngOnInIt(){
+
+  }
+
     protected readonly faUserPlus = faUserPlus;
 
     // protected readonly faUserPlus = faUserPlus;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {faAngleDown, faAngleUp, faUserPlus} from "@fortawesome/free-solid-svg-icons";
+// import {AddUserFormComponent} from "../add-user-form/add-user-form.component";
 
 @Component({
   selector: 'app-side-nav-bar',
@@ -11,6 +12,9 @@ export class SideNavBarComponent {
   isMasterCollapsed: boolean = true;
   isTransactionCollapsed: boolean = true;
   isSalesCollapsed: boolean = true;
+
+  constructor() {
+  }
 
   toggleMasterCollapse(): void {
     this.isMasterCollapsed = !this.isMasterCollapsed;
@@ -24,5 +28,8 @@ export class SideNavBarComponent {
 
   protected readonly faAngleDown = faAngleDown;
   protected readonly faAngleUp = faAngleUp;
+  addUserForm(): void{
+    // this.addUserFormComponent;
+  }
 
 }

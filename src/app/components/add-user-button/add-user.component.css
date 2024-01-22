@@ -1,0 +1,36 @@
+.create-user {
+  color: #fff;
+  /*background-color: #03C988;*/
+
+  display: inline-block;
+  padding: 10px 20px;
+  /*font-size: 16px;*/
+  text-align: center;
+  /*text-decoration: none;*/
+  cursor: pointer;
+  /*!*background-color: #3498db;*!*/
+  /*color: #fff;*/
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.create-user:hover{
+  background-color: #273952;
+}
+
+.createUser{
+  /*margin-left: 15px;*/
+  display: flex;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*margin-top: 5px;*/
+}
+
+.createUserBackground{
+  /*background-color: #03C988;*/
+  position: relative;
+
+}

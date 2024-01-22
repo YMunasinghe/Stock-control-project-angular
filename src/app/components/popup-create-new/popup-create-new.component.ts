@@ -71,12 +71,6 @@ export class PopupCreateNewComponent {
 
   ngOnInit(){
   }
-  // onClickSubmit(data: any) {
-  //   this.confirmPurchase.push(data)
-  //   console.log(this.confirmPurchase)
-  //   this.sharedService.setCartItemData(this.confirmPurchase);
-  //   this.router.navigate(['/confirmation'])
-  // }
 
 
   saveData() {

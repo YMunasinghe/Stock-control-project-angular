@@ -28,7 +28,8 @@ import { PopupCreateNewComponent } from './components/popup-create-new/popup-cre
 import { MomentModule } from 'ngx-moment';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { AddUserComponent } from './components/add-user/add-user.component';
+import { AddUserComponent } from './components/add-user-button/add-user.component';
+import { AddUserFormComponent } from './components/add-user-form/add-user-form.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     ProductMasterComponent,
     PopupCreateNewComponent,
     ProductCategoryComponent,
-    AddUserComponent
+    AddUserComponent,
+    AddUserFormComponent
   ],
   imports: [
     BrowserModule,
