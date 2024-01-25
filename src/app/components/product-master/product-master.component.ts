@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ProductMasterComponent {
 
+  products: any;
+  productSearchTerm: any;
+
+  makePDF() {
+
+  }
+
+  searchProduct() {
+
+  }
 }

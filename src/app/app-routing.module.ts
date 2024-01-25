@@ -15,24 +15,44 @@ import {PopupCreateNewComponent} from "./components/popup-create-new/popup-creat
 import {SupplierMasterComponent} from "./components/supplier-master/supplier-master.component";
 import {ProductCategoryComponent} from "./components/product-category/product-category.component";
 import {UserTableComponent} from "./components/user-table/user-table.component";
-import {AddUserComponent} from "./components/add-user-button/add-user.component";
+import {ProductMasterComponent} from "./components/product-master/product-master.component";
+import {AdminLayoutComponent} from "./layout/admin-layout/admin-layout.component";
 
 const routes: Routes = [
-  { path: '', component: TopBarComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'sideNavBar', component: SideNavBarComponent },
-  { path: 'loggedInTopBar', component: LoggedInTopBarComponent },
-  { path: 'loggedIn', component: LoggedInComponent },
-  { path: 'changingButton', component: ChangingButtonComponent },
-  { path: 'getData', component: GetDataComponent },
-  { path: 'searchItem', component: SearchItemComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'masterCustomer', component: CustomerMasterComponent },
-  { path: 'masterSupplier', component: SupplierMasterComponent },
-  { path: 'productCategory', component: ProductCategoryComponent },
-  { path: 'userTable', component: UserTableComponent },
-  // { path: 'addUserButton', component: AddUserComponent},
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+    // {
+    //   path: '',
+    //   redirectTo: 'login',
+    //   pathMatch: 'full'
+    // },
+    // {
+    //   path: 'login',
+    //   component: LoginComponent
+    // },
+  {
+    path: 'admin',
+    component: SideNavBarComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'masterCustomer', component: CustomerMasterComponent },
+      { path: 'masterSupplier', component: SupplierMasterComponent },
+      { path: 'productCategory', component: ProductCategoryComponent },
+      { path: 'product', component: ProductMasterComponent }
+    ]
+  }
+  // { path: '', component: TopBarComponent },
+  // { path: 'login', component: LoginComponent },
+  // { path: 'sideNavBar', component: SideNavBarComponent },
+  // { path: 'loggedInTopBar', component: LoggedInTopBarComponent },
+  // { path: 'loggedIn', component: LoggedInComponent },
+  // { path: 'changingButton', component: ChangingButtonComponent },
+  // { path: 'getData', component: GetDataComponent },
+  // { path: 'searchItem', component: SearchItemComponent },
+  // { path: 'dashboard', component: DashboardComponent },
+
+
+  // { path: 'userTable', component: UserTableComponent },
+  // { path: 'masterProduct', component: ProductMasterComponent },
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -28,8 +28,9 @@ import { PopupCreateNewComponent } from './components/popup-create-new/popup-cre
 import { MomentModule } from 'ngx-moment';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { AddUserComponent } from './components/add-user-button/add-user.component';
-import { AddUserFormComponent } from './components/add-user-form/add-user-form.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { CreateNewProductCategoryComponent } from './components/create-new-product-category/create-new-product-category.component';
+
 
 @NgModule({
   declarations: [
@@ -54,8 +55,8 @@ import { AddUserFormComponent } from './components/add-user-form/add-user-form.c
     ProductMasterComponent,
     PopupCreateNewComponent,
     ProductCategoryComponent,
-    AddUserComponent,
-    AddUserFormComponent
+    AdminLayoutComponent,
+    CreateNewProductCategoryComponent
   ],
   imports: [
     BrowserModule,

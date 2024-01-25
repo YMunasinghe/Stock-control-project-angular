@@ -1,20 +1,14 @@
+<app-logged-in-top-bar></app-logged-in-top-bar>
 <div class="sidebar">
 
-  <!-- Sidebar Header -->
   <div class="sidebar-header">
       <h3 class="software-name" style="margin-top: 20px;">Easy Stocks</h3>
   </div>
-<!--  <hr  style="margin: 0; left: 16px; width: calc(100% - 32px);">-->
-  <!-- Navigation links -->
 
   <div class="nav-content">
     <ul>
       <hr/>
       <li class="nav-button"><a routerLink="/dashboard">Dashboard</a></li>
-      <hr/>
-      <li class="nav-button"><a routerLink="/toDoList">To do List</a></li>
-      <hr/>
-      <li class="nav-button"><a routerLink="/reports">Reports</a></li>
       <hr/>
 
       <div (click)="toggleMasterCollapse()" class="drop-down-icon-style">
@@ -24,17 +18,16 @@
       <div [class.collapseBar]="isMasterCollapsed">
         <ul>
           <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/masterCustomer">Customer</a></li>
+          <li class="second-content"><a routerLink="/admin/masterCustomer">Customer</a></li>
           <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/masterSupplier">Supplier</a></li>
+          <li class="second-content"><a routerLink="/admin/masterSupplier">Supplier</a></li>
           <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/toDoList">Product</a></li>
+          <li class="second-content"><a routerLink="/admin/product">Product</a></li>
           <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/productCategory">Product Category</a></li>
+          <li class="second-content"><a routerLink="/admin/productCategory">Product Category</a></li>
       </ul>
       </div>
       <hr/>
-<!--      <li (click)="toggleTransactionCollapse()"><a routerLink="/reports">Transaction</a></li>-->
       <div (click)="toggleTransactionCollapse()">
         <div class="drop-down-icon-style">
         <li class="drop-down-icon-style"><a routerLink="/reports">Transaction</a></li>
@@ -44,26 +37,14 @@
       <div [class.collapseBar]="isTransactionCollapsed">
         <ul>
           <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/dashboard">PO</a></li>
-          <hr class="child-hr-style">
           <li class="second-content"><a routerLink="/toDoList">GRN</a></li>
           <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/toDoList">GRN Return</a></li>
-          <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/toDoList">Issue Sample</a></li>
-          <hr class="child-hr-style">
-          <li class="second-content"><a routerLink="/toDoList">Damage</a></li>
+          <li class="second-content"><a routerLink="/toDoList">GIN</a></li>
         </ul>
       </div>
       <hr/>
-      <li><a routerLink="/reports">Sales</a></li>
-
-      <hr/>
-  <!--     Add more navigation items as needed -->
     </ul>
-    <div class="createUser">
-      <app-add-user></app-add-user>
-    </div>
 
   </div>
 </div>
+<router-outlet></router-outlet>
