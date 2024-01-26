@@ -4,8 +4,7 @@
       <div class="modal-header" style="padding: 5px;">
 
 
-        <h5 class="modal-title" id="exampleModalLabel">Create New Category</h5>
-
+        <h5 class="modal-title" id="exampleModalLabel">Create New Product</h5>
 
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="clearTheForm()"></button>
       </div>
@@ -13,13 +12,26 @@
         <form>
           <div class="mb-2" style="margin-bottom: 0;">
             <label style="padding-top: 0; padding-bottom: 3px;" for="recipient-code" class="col-form-label">Code:</label>
-            <input type="text" class="form-control" id="recipient-code" style="padding: 3px;" [(ngModel)]="categoryCodeTerm" name="code">
+            <input type="text" class="form-control" id="recipient-code" style="padding: 3px;" [(ngModel)]="productCodeTerm" name="code">
           </div>
           <div class="mb-2">
             <label style="padding-top: 0; padding-bottom: 3px" for="recipient-name" class="col-form-label">Name:</label>
-            <input type="text" class="form-control" id="recipient-name" style="padding: 3px;" [(ngModel)]="categoryNameTerm" name="name">
+            <input type="text" class="form-control" id="recipient-name" style="padding: 3px;" [(ngModel)]="productNameTerm" name="name">
+          </div>
+          <div class="mb-2" style="margin-bottom: 0;">
+            <label style="padding-top: 0; padding-bottom: 3px;" for="recipient-code" class="col-form-label">Description:</label>
+            <input type="text" class="form-control" id="recipient-description" style="padding: 3px;" [(ngModel)]="productDescriptionTerm" name="description">
           </div>
 
+          <div class="mb-2">
+            <label style="padding-top: 0; padding-bottom: 3px" for="recipient-name" class="col-form-label">Category:</label>
+            <select class="form-control" id="recipient-category" style="padding: 3px;" [(ngModel)]="productCategory" name="category">
+              <option value="" disabled>Select the Category</option>
+              <option *ngFor="let category of selectedProductCategory">
+                {{ category.productCategoryName }}
+              </option>
+            </select>
+          </div>
         </form>
       </div>
       <div class="modal-footer" style="padding: 5px;">

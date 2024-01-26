@@ -16,13 +16,7 @@ export class CustomerMasterComponent {
 
   customers: any = [];
   customersSecond: any = [];
-
-  gettingData() {
-
-  }
-
   customerSearchTerm: any = '';
-  searchResults: any[] = [];
 
   constructor(private customerService : DataService) {}
 
@@ -36,7 +30,6 @@ export class CustomerMasterComponent {
       this.searchCustomer();
       })
   }
-
 
   /**
    * This method is for search Customer

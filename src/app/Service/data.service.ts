@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 // import {CustomerDTO} from "./customer";
 import {CustomerDTO} from "../customer";
 import {SupplierDTO} from "../supplier";
+import {ProductCategoryDTO} from "../productCategory";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class DataService {
   private customerName: any='';
   private supplierName: any='';
   private productCategoryName: any='';
+  private productName: any='';
 
   setProductCategoryName(data: any): void {
     this.productCategoryName = data;
@@ -37,6 +39,14 @@ export class DataService {
 
   getSupplierName(): any {
     return this.supplierName;
+  }
+
+  setProductName(data: any): void {
+    this.productName = data;
+  }
+
+  getProductName(): any {
+    return this.productName;
   }
 
   constructor(private httpClient:HttpClient) { }
@@ -71,8 +81,16 @@ export class DataService {
     return this.httpClient.get<any>(`${this.apiUrl}`+'/productCategory/getAllProductCategories');
   }
 
+  saveProductCategory(productCategory?:ProductCategoryDTO):Observable<any>{
+    return this.httpClient.post<any>(`${this.apiUrl}`+'/productCategory/addProductCategory',productCategory);
+  }
+
   searchProductCategory():Observable<any>{
     return this.httpClient.get<any>(`${this.apiUrl}`+'/supplier/getSupplierByName/'+`${this.supplierName}`);
+  }
+
+  getProducts():Observable<any>{
+      return this.httpClient.get<any>(`${this.apiUrl}`+'/product/getAllProducts');
   }
 
 

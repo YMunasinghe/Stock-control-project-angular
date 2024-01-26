@@ -1,0 +1,38 @@
+<div class="main-container" style="margin-right: 40px;">
+  <div class="dummy-top-bar" style="margin-bottom: 40px;"></div>
+
+  <h5 class="modal-title" id="exampleModalLabel" style="margin-bottom: 20px;">Good Received Note</h5>
+
+  <div class="modal-body" style="padding: 10px;">
+    <form>
+      <div class="mb-2" style="margin-bottom: 0;">
+        <label style="padding-top: 0; padding-bottom: 3px;" for="supplier" class="col-form-label">Supplier:</label>
+        <select class="form-control" id="supplier" style="padding: 3px;" [(ngModel)]="selectedSupplier" name="supplier">
+          <option value="" disabled>Select supplier</option>
+          <option *ngFor="let supplier of suppliers">
+            {{ supplier.supplierName }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <label style="padding-top: 0; padding-bottom: 3px" for="item" class="col-form-label">Item:</label>
+        <select class="form-control" id="item" style="padding: 3px;" [(ngModel)]="selectedProduct" name="item">
+          <option value="" disabled>Select item</option>
+          <option *ngFor="let product of products">
+            {{ product.itemName }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-2" style="margin-bottom: 0;">
+        <label style="padding-top: 0; padding-bottom: 3px;" for="quantity" class="col-form-label">Quantity:</label>
+        <input type="text" class="form-control" id="quantity" style="padding: 3px;" [(ngModel)]="quantityTerm" name="quantity">
+      </div>
+
+      <div class="mb-2">
+        <label style="padding-top: 0; padding-bottom: 3px" for="price" class="col-form-label">Price:</label>
+        <input type="text" class="form-control" id="price" style="padding: 3px;" [(ngModel)]="priceTerm" name="price">
+      </div>
+      <button type="button" class="btn btn-primary"  (click)="saveData()" style="margin-top: 30px;">Save</button>
+    </form>
+  </div>
+</div>

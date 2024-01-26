@@ -16,7 +16,8 @@ import {SupplierMasterComponent} from "./components/supplier-master/supplier-mas
 import {ProductCategoryComponent} from "./components/product-category/product-category.component";
 import {UserTableComponent} from "./components/user-table/user-table.component";
 import {ProductMasterComponent} from "./components/product-master/product-master.component";
-import {AdminLayoutComponent} from "./layout/admin-layout/admin-layout.component";
+import {GrnComponent} from "./components/grn/grn.component";
+
 
 const routes: Routes = [
     // {
@@ -36,7 +37,8 @@ const routes: Routes = [
       { path: 'masterCustomer', component: CustomerMasterComponent },
       { path: 'masterSupplier', component: SupplierMasterComponent },
       { path: 'productCategory', component: ProductCategoryComponent },
-      { path: 'product', component: ProductMasterComponent }
+      { path: 'product', component: ProductMasterComponent },
+      { path: 'grn', component: GrnComponent }
     ]
   }
   // { path: '', component: TopBarComponent },

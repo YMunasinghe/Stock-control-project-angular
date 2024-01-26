@@ -28,8 +28,9 @@ import { PopupCreateNewComponent } from './components/popup-create-new/popup-cre
 import { MomentModule } from 'ngx-moment';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { CreateNewProductCategoryComponent } from './components/create-new-product-category/create-new-product-category.component';
+import { CreateNewProductComponent } from './components/create-new-product/create-new-product.component';
+import { GrnComponent } from './components/grn/grn.component';
 
 
 @NgModule({
@@ -55,8 +56,9 @@ import { CreateNewProductCategoryComponent } from './components/create-new-produ
     ProductMasterComponent,
     PopupCreateNewComponent,
     ProductCategoryComponent,
-    AdminLayoutComponent,
-    CreateNewProductCategoryComponent
+    CreateNewProductCategoryComponent,
+    CreateNewProductComponent,
+    GrnComponent
   ],
   imports: [
     BrowserModule,
